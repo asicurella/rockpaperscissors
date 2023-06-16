@@ -23,14 +23,30 @@ function enterKeyDown(event) {
     }
 }
 
-
+let result = "";
 console.log(playerSelection());
 function playGame(playerSelection, computerSelection){
     if (playerSelection === 'Rock' && computerSelection === 'Rock'){
-        return 'You chose Rock. Computer chose Rock. You tie!';
+        let result = 'Tie.';
     } else if (playerSelection === 'Paper' && computerSelection === 'Rock'){
-        return 'You chose Paper. Computer chose Rock. You win!';
+        let result = 'Win.';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Rock'){
-        return 'You chose Scissors. Computer chose Rock. You lose!';
+        let result = 'Lose.';
+    } else if (playerSelection === 'Paper' && computerSelection === 'Paper'){
+        let result = 'Tie.';
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Paper'){
+        let result = 'Win.';
+    } else if (playerSelection === 'Rock' && computerSelection === 'Paper'){
+        let result = 'Lose.';
+    } else if (playerSelection === 'Rock' && computerSelection === 'Scissors'){
+        let result = 'Win.';
+    } else if (playerSelection === 'Paper' && computerSelection === 'Scissors'){
+        let result = 'Lose.';
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors'){
+        let result = 'Tie.';
+}}
+
+    function displayResult(){
+        
     }
-}
+
