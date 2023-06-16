@@ -1,52 +1,60 @@
+let computerSelection = "";
+
 function getComputerChoice(){
     const choice = Math.random();
-
-    let computerMove = "";
-
+    let computerChoice = "";
     if (choice >= 0 && choice < 1/3){
-        computerMove = 'Rock';
+        computerChoice = 'Rock';
     } else if (choice > 1/3 && choice <= 2/3){
-        computerMove = 'Paper';
+        computerChoice = 'Paper';
     } else if (choice > 2/3 && choice <= 1){
-        computerMove = 'Scissors';
+        computerChoice = 'Scissors';
     }
-    return computerMove;
-    
+    computerSelection = computerChoice;
 }
+let playerSelection = "";
 function getInputValue(){
-   let inputElement = document.getElementById("js-input").value;
-   let playerSelection = inputElement;
+    let inputElement = document.getElementById("js-input").value;
+    playerSelection = inputElement;
+   
 }
-function enterKeyDown(event) {
+/*function enterKeyDown(event) {
     if (event.key === Enter) {
         
     }
+} */
+let result = "";
+function displayResult(){
+    alert(`The result is: ${result}`);
+
 }
 
-let result = "";
-console.log(playerSelection());
 function playGame(playerSelection, computerSelection){
+    getInputValue();
+    getComputerChoice();
     if (playerSelection === 'Rock' && computerSelection === 'Rock'){
-        let result = 'Tie.';
+        result = 'Tie.';
     } else if (playerSelection === 'Paper' && computerSelection === 'Rock'){
-        let result = 'Win.';
+        result = 'Win.';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Rock'){
-        let result = 'Lose.';
+        result = 'Lose.';
     } else if (playerSelection === 'Paper' && computerSelection === 'Paper'){
-        let result = 'Tie.';
+        result = 'Tie.';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Paper'){
-        let result = 'Win.';
+        result = 'Win.';
     } else if (playerSelection === 'Rock' && computerSelection === 'Paper'){
-        let result = 'Lose.';
+        result = 'Lose.';
     } else if (playerSelection === 'Rock' && computerSelection === 'Scissors'){
-        let result = 'Win.';
+        result = 'Win.';
     } else if (playerSelection === 'Paper' && computerSelection === 'Scissors'){
-        let result = 'Lose.';
+        result = 'Lose.';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors'){
-        let result = 'Tie.';
-}}
-
-    function displayResult(){
-        
+        result = 'Tie.';
+    } else () =>{
+        alert('You did not enter a valid move. Try "Rock", "Paper", or "Scissors".');
     }
+    displayResult();
+}
+
+
 
