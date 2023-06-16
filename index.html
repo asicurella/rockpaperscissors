@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <title>Rock Paper Scissors - Odin</title>
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="javascript.js"></script>
+        <script type="text/javascript" src="javascript.js" defer></script>
     </head>
     <body>
         <p>Your move:</p>
-        <input placeholder="Type Move Here..." class="moveElement">
+        <input type="text" placeholder="Type Move Here..." id="js-input">
+        <button type="button" onclick="getInputValue();">Enter</button>
+        
     </body>
 </html>
