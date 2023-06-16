@@ -13,8 +13,18 @@ function getComputerChoice(){
     return computerMove;
     
 }
-let platerSelection = document.querySelector(input)
+function getInputValue(){
+   let inputElement = document.getElementById("js-input").value;
+   let playerSelection = inputElement;
+}
+function enterKeyDown(event) {
+    if (event.key === Enter) {
+        
+    }
+}
 
+
+console.log(playerSelection());
 function playGame(playerSelection, computerSelection){
     if (playerSelection === 'Rock' && computerSelection === 'Rock'){
         return 'You chose Rock. Computer chose Rock. You tie!';
